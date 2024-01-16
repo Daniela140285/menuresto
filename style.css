@@ -1,5 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/budayut');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,800;0,900;1,300;1,500;1,600;1,700;1,900&display=swap');
+
+:root{
+    --color-fuentes: #dfcdac;
+    --color-fondo: rgb(20, 20, 22);
+}
 *{
     margin:0;
     padding: 0;
@@ -7,6 +12,7 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 .hero{
     height: 88dvh;
@@ -37,10 +43,10 @@
 .hero_title h1{
     font-family: 'Budayut', sans-serif;
     font-size: 5rem;
-    color:  #dfcdac;                                            
+    color: var(--color-fuentes);                                            
 }
 .nav_container{
-    background-color: rgb(20, 20, 22);
+    background-color: var(--color-fondo);
     height: 12dvh;
 }
 .nav_links{
@@ -50,35 +56,38 @@
     padding-top: 20px;
 }
 .nav_links li a{
-    color: #dfcdac;
+    color: var(--color-fuentes);
     font-size: 2rem;
 }
 .variantes_container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color:rgb(20, 20, 22) ;
+    background-color:var(--color-fondo) ;
 }
 .variantes{
     padding: 40px;
 }
 .variantes h2{
-    color: #dfcdac;
+    color: var(--color-fuentes);
     font-size: 2rem;
     margin: 20px 0;
     text-align: center;    
     border-bottom: 2px solid #dfcdac; 
 }
 .variantes ul li{
-    color: #dfcdac;
+    color: var(--color-fuentes);
     line-height: 50px;
     font-size: 1.5rem;
+}
+.variantes ul :nth-last-of-type(even){
+    color:   #8d785d;
 }
 span{
     float: right;
 }
 .flecha{
-    color: #dfcdac;
+    color: var(--color-fuentes);
     position: fixed;
     bottom: 1px;
     right: 35px;
@@ -91,21 +100,17 @@ footer{
     background-color: #6c6870 ;
     height: 70px;
 }
-footer p{
-    color: #dfcdac;
+.final p{
+    color: var(--color-fuentes);
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap:wrap ;
     justify-content: space-between;
     font-size: 1.2rem;
-    padding-top: 6px;
+    padding-top: 10px;
 }
-.firma{
-
+.final p:last-child{
+    color: #2e2b2b;
+    font-size: 1rem;
 }
-/* .firma{
-    transform: rotate(270deg);
-    position: absolute;
-    bottom: 60px;
-    right: -30px;
-} */
